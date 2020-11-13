@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <style media="screen">
+      .NewYear{
+        text-align: center;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{% block heading %}{% endblock %}</h1>
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>

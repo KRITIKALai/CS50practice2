@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+
+<h1>Hello {{ headline }} to the World!!!</h1>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="NewYear">
+  {% if isnewyear %}
+   <h3>Yes it is a new year day.. Happie New Year!!!</h3>
+  {% else %}
+   <h3>Noops... It is not a new year day.. Hold On</h3>
+  {% endif %}
+</div>
+
+<a href="{{ url_for('more') }}">See More...</a>
+
+{% endblock %}
