@@ -2,7 +2,7 @@
 
 {% block heading %}
 
-<h1>Hello {{ headline }} to the World!!!</h1>
+<h1>Hello Homo Sapien !!!</h1>
 
 {% endblock %}
 
@@ -16,6 +16,9 @@
   {% endif %}
 </div>
 
-<a href="{{ url_for('more') }}">See More...</a>
+<form action="{{ url_for('resolutions') }}" method="post">
+  <input type="text" name="name" value="Enter Your Name">
+  <button>Submit</button>
+</form>
 
 {% endblock %}

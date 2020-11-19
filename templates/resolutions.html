@@ -1,0 +1,33 @@
+{% extends "layout.html"%}
+
+{% block heading %}
+
+<h1>Dearest Homo Sapien,</h1>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="NewYear">
+  {% if isnewyear %}
+   <h2>Hello {{ name }}, today is the new year day and your resolutions are as follows:</h2>
+  {% else %}
+   <h2>Hello {{ name }}, although today is not a new year you can add your resolutions here: </h2>
+   <form action="{{ url_for('resolutions') }}" method="post">
+     <input type="text" name="resolution" value="Here..">
+     <button>Add to List</button>
+   </form>
+  {% endif %}
+</div>
+
+<div class="Resolutions">
+  <ul>
+      {% for resolution in resolutions %}
+      <li>{{ resolution }}</li>
+      {% endfor %}
+  </ul>
+</div>
+
+<a href="{{ url_for('index') }}">Go Back...</a>
+
+{% endblock %}
